@@ -6,5 +6,10 @@ Replace the example solidty code with yours and press the compile button:)<br><b
 ![demo img](img/demo.png)
 
 ## Usage
-Simply open the index.html in your browser window<br>
-Then open the inspecter window to check the output(compiled bytecode & abi) in browser console 
+```javascript
+cd browserCompileSolidity
+python -m SimpleHTTPServer // this will link localhost:8000 to our index.html
+```
+<br>
+Then navigate to `localhost:8000` to start!<br>
+You can open the inspecter window to check the output(compiled bytecode & abi) in the browser console
