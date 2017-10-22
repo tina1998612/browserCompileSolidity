@@ -1,5 +1,5 @@
 # browserCompileSolidity
-![demo img]('./img/demo.png')
+![demo img](img/demo.png)
 
 ## Usage
 Simply open the index.html in your browser window<br>
