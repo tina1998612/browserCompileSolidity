@@ -6,6 +6,9 @@ Replace the example solidty code with yours and press the compile button:)<br><b
 
 [Live demo](http://rawgit.com/tina1998612/browserCompileSolidity/master/index.html): please run it in google chrome;)
 
+### Note:
+Remember to enable metamask extension and login to your metamask account  
+
 ## Screenshot
 ![demo img](img/demo.png)
 
