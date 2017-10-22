@@ -3,6 +3,10 @@
 ## Overview
 It's like a mini text editor for compiling solidity code from client side! (you can also see this as an example script to add in your project)<br>
 Replace the example solidty code with yours and press the compile button:)<br><br>
+
+[DEMO](http://rawgit.com/tina1998612/browserCompileSolidity/master/index.html);
+
+## Screenshot
 ![demo img](img/demo.png)
 
 ## Usage
