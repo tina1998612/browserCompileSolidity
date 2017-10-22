@@ -9,8 +9,9 @@ Replace the example solidty code with yours and press the compile button:)<br><b
 ## Screenshot
 ![demo img](img/demo.png)
 
-## Usage
+## Run from script
 ```javascript
+git clone https://github.com/tina1998612/browserCompileSolidity.git
 cd browserCompileSolidity
 python -m SimpleHTTPServer // this will link localhost:8000 to our index.html
 ```
