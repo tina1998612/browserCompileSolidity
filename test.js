@@ -72,10 +72,6 @@ function deploy() {
                 }
             }
         });
-        // setInterval(function () {
-        //     console.log(myContractReturned.transactionHash);
-        //     console.log(myContractReturned.address);
-        // }, 5000);
 
     });
 }
