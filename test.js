@@ -47,7 +47,7 @@ function compile(_callback) {
 
 }
 
-function deploy() {
+function beforeDeploy() {
 
     if (typeof web3 !== 'undefined') {
         web3 = new Web3(web3.currentProvider);
@@ -57,22 +57,25 @@ function deploy() {
     }
 
     // if not all the needed values for deploying are defined, compile the code first
-    if (!(bytecode && abi && gasEstimate)) compile(function () { // wait for the first function to complete
-        var contractToDeploy = web3.eth.contract(abi);
-        var myContractReturned = contractToDeploy.new({
-            from: web3.eth.accounts[0],
-            data: bytecode,
-            gas: gasEstimate
-        }, function (err, myContract) {
-            if (!err) {
-                if (!myContract.address) {
-                    console.log(myContract.transactionHash) // The hash of the transaction, which deploys the contract
-                } else {
-                    console.log(myContract.address) // the contract address
-                }
-            }
-        });
+    if (!(bytecode && abi && gasEstimate)) compile(deploy); // wait for the first function to complete with a callback function 
+    else deploy();
+}
 
+function deploy() {
+    var contractToDeploy = web3.eth.contract(abi);
+    var myContractReturned = contractToDeploy.new({
+        from: web3.eth.accounts[0],
+        data: bytecode,
+        gas: gasEstimate
+    }, function (err, myContract) {
+        if (!err) {
+            if (!myContract.address) {
+                console.log(myContract.transactionHash) // The hash of the transaction, which deploys the contract
+            } else {
+                console.log(myContract.address) // the contract address
+            }
+        }
     });
+
 }
 

@@ -39,7 +39,7 @@
 
 <body>
     <button type="button" id="compile" class="btn btn-primary" onclick="compile(function(){})">compile</button>
-    <button type="button" id="deploy" class="btn btn-primary" onclick="deploy()">deploy</button>
+    <button type="button" id="deploy" class="btn btn-primary" onclick="beforeDeploy()">deploy</button>
     <textarea type="text" placeholder="pragma solidity ^0.4.2;&#10;contract mortal {&#10;    /* Define variable owner of the type address*/&#10;    address owner;&#10;&#10;    /* this function is executed at initialization and sets the owner of the contract */&#10;    function mortal() { owner = msg.sender; }&#10;&#10;    /* Function to recover the funds on the contract */&#10;    // function kill() { if (msg.sender == owner) selfdestruct(owner); }&#10;}&#10;&#10;contract greeter is mortal {&#10;     /* define variable greeting of the type string */&#10;    string greeting;&#10;&#10;    /* this runs when the contract is executed */&#10;    function greeter(string _greeting) public {&#10;        greeting = _greeting;&#10;    }&#10;&#10;    /* main function */&#10;    function greet() constant returns (string) {&#10;        return greeting;&#10;    }&#10;}"></textarea>
 
 </body>
